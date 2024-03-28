@@ -5,7 +5,7 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            slides: slides, //proxy dell'array*
+            slides: slides, //proxy dell'array
             activeIndexSlide: 0,//indice della slide attiva
         }
     },
@@ -23,10 +23,14 @@ createApp({
             }else{
                 this.activeIndexSlide = this.slides.length -1;
             }
-        }
-    },
+        },
+        currentSlide(){            
+                this.activeIndexSlide = 0
+                console.log(event.target);
+    }
+},
     mounted(){
-        setInterval(this.nextSlide, 3000)
-        this.nextSlide
+        // setInterval(this.nextSlide, 3000)
+        // this.nextSlide
     }
 }).mount('#app')
