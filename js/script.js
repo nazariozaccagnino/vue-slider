@@ -24,13 +24,13 @@ createApp({
                 this.activeIndexSlide = this.slides.length -1;
             }
         },
-        currentSlide(){            
-                this.activeIndexSlide = 0
-                console.log(event.target);
+        currentSlide(event){            
+               console.log(event.target)                         
     }
 },
     mounted(){
         // setInterval(this.nextSlide, 3000)
         // this.nextSlide
     }
+    
 }).mount('#app')
